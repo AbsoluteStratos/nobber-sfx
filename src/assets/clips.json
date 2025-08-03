@@ -1,14 +1,100 @@
 {
     "clips": [
         {
-            "name": "Pruned",
+            "name": "pruned",
             "file": "sfx/pruned.mp3",
-            "keybind": "p"
+            "clip_url": "ohhnoss/clip/VainOptimisticNigiriBabyRage-y9sQiDXEP7f0i08G",
+            "game": "Elsword",
+            "keybind": "p",
+            "disable": false
         },
         {
-            "name": "test 2",
-            "file": "sfx/test.mp3",
-            "keybind": "k"
+            "name": "skrrrt",
+            "file": "sfx/skrrrt.mp3",
+            "clip_url": "ohhnoss/clip/GlamorousTubularAardvarkAllenHuhu-Kq7kOU1XUUC31AVp",
+            "game": "Pokémon Trading Card Game",
+            "keybind": "s",
+            "disable": false
+        },
+        {
+            "name": "sheeesh",
+            "file": "sfx/sheesh.mp3",
+            "clip_url": "ohhnoss/clip/EphemeralLuckyJellyfishSMOrc-269c6QILhLJOLKlD",
+            "game": "Just Chatting",
+            "keybind": "h",
+            "disable": false
+        },
+        {
+            "name": "gugyugubabugwaaaah",
+            "file": "sfx/gugyugubabugwaaaah.mp3",
+            "clip_url": "ohhnoss/clip/GracefulPiliableTardigradePlanking-7nkeQHegqrJO3_MR",
+            "game": "Pokémon Legends: Arceus",
+            "keybind": "g",
+            "disable": false
+        },
+        {
+            "name": "nobonobu",
+            "file": "sfx/nobonobu.mp3",
+            "clip_url": "ohhnoss/clip/CreativeNaiveWallabyCorgiDerp-N7HxoPE-6JVaIEtB",
+            "game": "Placid Plastic Duck Simulator",
+            "keybind": "n",
+            "disable": false
+        },
+        {
+            "name": "its chibi",
+            "file": "sfx/itschibi.mp3",
+            "clip_url": "ohhnoss/clip/DiligentWonderfulZucchiniPJSugar-QMPkr3sdACHgDS1H",
+            "game": "Just Chatting",
+            "keybind": "i",
+            "disable": false
+        },
+        {
+            "name": "watch this",
+            "file": "sfx/watch.mp3",
+            "clip_url": "clip/UnusualHardWasabiShadyLulu-xMRgTSVgI2ceeEzQ",
+            "game": "Baldur's Gate 3",
+            "keybind": "t",
+            "disable": false
+        },
+        {
+            "name": "not dead",
+            "file": "sfx/dead.mp3",
+            "clip_url": "ohhnoss/clip/PuzzledScaryLouseRedCoat-inu-lmOy_bBczwIW",
+            "game": "Pokémon Legends: Arceus",
+            "keybind": "d",
+            "disable": false
+        },
+        {
+            "name": "inspiration",
+            "file": "sfx/inspiration.mp3",
+            "clip_url": "ohhnoss/clip/SlickHappyMeatloafPoooound-_6r3BBuKtx8_xjoY",
+            "game": "ROBLOX",
+            "keybind": "i",
+            "disable": true
+        },
+        {
+            "name": "ohhh",
+            "file": "sfx/o.mp3",
+            "clip_url": "ohhnoss/clip/DifficultIronicLEDMcaT-SuFvpnNFDJQAwomj",
+            "game": "Art",
+            "keybind": "o",
+            "disable": false
+        },
+        {
+            "name": "moe kyun",
+            "file": "sfx/moe.mp3",
+            "clip_url": "ohhnoss/clip/VainDrabAnacondaBuddhaBar-xHyE17YE9EEd58Xm",
+            "game": "Art",
+            "keybind": "m",
+            "disable": false
+        },
+        {
+            "name": "wobbuffet",
+            "file": "sfx/wobbuffet.mp3",
+            "clip_url": "ohhnoss/clip/AnnoyingFurryBoarOptimizePrime-VovKHdj2zu8FXmDA",
+            "game": "Pokémon Sword/Shield",
+            "keybind": "w",
+            "disable": false
         }
     ]
 }

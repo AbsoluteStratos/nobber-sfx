@@ -6,23 +6,25 @@ interface Props {
 	name: string;
     file: string;
     keybind: string;
+    clip_url: string;
+    game: string;
     style?: string;
 }
-const {name, file, keybind, style} = Astro.props;
+const {name, file, keybind, clip_url, game, style} = Astro.props;
 const id = name.toLocaleLowerCase().replace(" ","-");
 ---
 <div class="audio-container">
     <div class="audio-name">
         {name}
+        <div >
+        <a href={"https://twitch.tv/" + clip_url} target="_blank" id="audio-clip-game">
+            <span>{game}</span>
+            <Icon name="material-symbols:link" class="game-link-icon"></Icon>
+        </a>
+        </div>
     </div>
-    <div class="audio-player">
-        <!-- <div class="play-btn" id="playPauseBtn"></div>
-        <div class="progress">
-            <input type="range" id="seekBar" value="0" min="0" step="1">
-        </div> -->
-        <audio id={"audio-player-"+id} controls preload="auto" src={file}></audio>
-    </div>
-    <div class="audio-hot-key">
+    <audio id={"audio-player-"+id} controls preload="auto" src={file}></audio>
+    <div class="audio-hot-key" id={"audio-hot-key-"+id}>
         <!-- <Icon name="material-symbols:keyboard" class="hot-key-icon"></Icon> -->
         <div class="hot-key-text">
             {keybind}
@@ -34,36 +36,61 @@ const id = name.toLocaleLowerCase().replace(" ","-");
 <style>
     .audio-container{
         display: flex;
-        justify-content: center; /* horizontal */
+        /* justify-content: center; */
+        justify-content: space-between;
         align-items: center;     /* vertical */
         margin-bottom: 5px;
         gap: 10px;
     }
 
     .audio-name{
-        width: 4rem;
+        width: 12rem;
         text-align: right;
         font-family: 'Comic Sans MS', cursive, sans-serif;
         color: salmon;
         font-weight: bold;
-        font-size: clamp(0.2rem, 4vw, 1.25rem);
+        font-size: clamp(0.5rem, 2.5vw, 1.25rem);
         -webkit-text-stroke: 0.25px white; /* white border around text */
         text-stroke: 0.25px white;         /* fallback for future support */
     }
 
-    .audio-player {
-        background-color: rgb(241, 129, 117);
-        border: 2px solid white;
-        border-radius: 20px;
-        padding: 16px 24px;
+    #audio-clip-game{
         display: flex;
+        justify-content: right;
         align-items: center;
-        gap: 16px;
-        width: 320px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        gap: 2px;
+        font-size: 0.5rem;
+        -webkit-text-stroke: 0px white; /* white border around text */
+        text-stroke: 0px white;         /* fallback for future support */
+    }
+    a:link {
+        color: salmon; /* Unvisited link color */
+        text-decoration: none;
+    }
+    a:visited {
+        color: salmon; /* Visited link color */
     }
 
+    a:hover {
+        color: rgb(173, 87, 78); /* Hover link color */
+        text-decoration: underline; /* Add underline on hover */
+    }
+
+    #audio-clip-game>.game-link-icon {
+        vertical-align: middle;
+    }
+
+    audio {
+        background-color: rgb(255, 189, 182); /* Background color of the audio player container */
+        border: 1px solid #e9e8e8; /* Border around the audio player */
+        border-radius: 8px; /* Rounded corners */
+        padding: 10px; /* Padding inside the player */
+        width: 100%; /* Adjust width as needed */
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+        width: 24rem;
+    }
     .audio-hot-key{
+        width: 12rem;
         color: salmon;
         border: 2px solid white;
         border-radius: 20px;
@@ -71,9 +98,16 @@ const id = name.toLocaleLowerCase().replace(" ","-");
         align-items: center;
         justify-content: center;
         gap: 8px;
-        width: 4rem;
-        margin-left: ;
+        user-select: none;
+        -webkit-user-select: none; /* Safari, Chrome */
+        -moz-user-select: none;    /* Firefox */
+        -ms-user-select: none;     /* Internet Explorer, Edge */
     }
+    .audio-hot-key:hover{
+        background-color: #ffd7d7;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
     .hot-key-icon{
         margin-left:4px;
         font-size: 4rem;
@@ -91,7 +125,13 @@ const id = name.toLocaleLowerCase().replace(" ","-");
   document.addEventListener('keydown', (event) => {
     if (event.key.toLowerCase() == keybind) {
         const audio = document.getElementById('audio-player-'+id);
+        audio.currentTime = 0;
         audio.play();
     }
+  });
+  document.getElementById("audio-hot-key-"+id).addEventListener('click', () => {
+    const audio = document.getElementById('audio-player-'+id);
+    audio.currentTime = 0;
+    audio.play();
   });
 </script>

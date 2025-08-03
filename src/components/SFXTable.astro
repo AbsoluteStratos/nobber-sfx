@@ -4,15 +4,21 @@ import clipJson from '../assets/clips.json';
 import Title from './Title.astro';
 
 type Clip = {
-  name: string;
-  file: string;
-  keybind: string;
+    name: string;
+    file: string;
+    keybind: string;
+    clip_url: string;
+    game: string;
 };
 
-const clipList: Clip[] = clipJson.clips.map((clip): Clip => ({
+const clipList: Clip[] = clipJson.clips
+.filter(clip => clip.disable === false)
+.map((clip): Clip => ({
   name: clip.name,
   file: clip.file,
   keybind: clip.keybind,
+  clip_url: clip.clip_url,
+  game: clip.game,
 }));
 
 let delay = 0;
@@ -26,6 +32,8 @@ const interval = 50;
                 name={entry.name}
                 file={entry.file}
                 keybind={entry.keybind}
+                clip_url={entry.clip_url}
+                game={entry.game}
                 class:list="onload-animation"
                 style={`animation-delay: calc(var(--content-delay) + ${delay++ * interval}ms);`}
             ></SFXCard>
