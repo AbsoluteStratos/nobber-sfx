@@ -20,8 +20,16 @@
             "name": "sheeesh",
             "file": "sfx/sheesh.mp3",
             "clip_url": "ohhnoss/clip/EphemeralLuckyJellyfishSMOrc-269c6QILhLJOLKlD",
-            "game": "Just Chatting",
+            "game": "Art",
             "keybind": "h",
+            "disable": false
+        },
+        {
+            "name": "nwooo",
+            "file": "sfx/nwooo.mp3",
+            "clip_url": "ohhnoss/clip/NeighborlyGlamorousWhaleFutureMan-WuG12YwBj-61QH7N",
+            "game": "Just Chatting",
+            "keybind": "n",
             "disable": false
         },
         {
@@ -37,7 +45,7 @@
             "file": "sfx/nobonobu.mp3",
             "clip_url": "ohhnoss/clip/CreativeNaiveWallabyCorgiDerp-N7HxoPE-6JVaIEtB",
             "game": "Placid Plastic Duck Simulator",
-            "keybind": "n",
+            "keybind": "b",
             "disable": false
         },
         {
