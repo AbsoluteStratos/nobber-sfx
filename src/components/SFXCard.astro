@@ -1,0 +1,97 @@
+---
+import path from "node:path";
+import { Icon } from "astro-icon/components";
+
+interface Props {
+	name: string;
+    file: string;
+    keybind: string;
+    style?: string;
+}
+const {name, file, keybind, style} = Astro.props;
+const id = name.toLocaleLowerCase().replace(" ","-");
+---
+<div class="audio-container">
+    <div class="audio-name">
+        {name}
+    </div>
+    <div class="audio-player">
+        <!-- <div class="play-btn" id="playPauseBtn"></div>
+        <div class="progress">
+            <input type="range" id="seekBar" value="0" min="0" step="1">
+        </div> -->
+        <audio id={"audio-player-"+id} controls preload="auto" src={file}></audio>
+    </div>
+    <div class="audio-hot-key">
+        <!-- <Icon name="material-symbols:keyboard" class="hot-key-icon"></Icon> -->
+        <div class="hot-key-text">
+            {keybind}
+        </div>
+    </div>
+</div>
+
+
+<style>
+    .audio-container{
+        display: flex;
+        justify-content: center; /* horizontal */
+        align-items: center;     /* vertical */
+        margin-bottom: 5px;
+        gap: 10px;
+    }
+
+    .audio-name{
+        width: 4rem;
+        text-align: right;
+        font-family: 'Comic Sans MS', cursive, sans-serif;
+        color: salmon;
+        font-weight: bold;
+        font-size: clamp(0.2rem, 4vw, 1.25rem);
+        -webkit-text-stroke: 0.25px white; /* white border around text */
+        text-stroke: 0.25px white;         /* fallback for future support */
+    }
+
+    .audio-player {
+        background-color: rgb(241, 129, 117);
+        border: 2px solid white;
+        border-radius: 20px;
+        padding: 16px 24px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        width: 320px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .audio-hot-key{
+        color: salmon;
+        border: 2px solid white;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        width: 4rem;
+        margin-left: ;
+    }
+    .hot-key-icon{
+        margin-left:4px;
+        font-size: 4rem;
+    }
+    .hot-key-text{
+        margin-top: 4px;
+        margin-bottom: 4px;
+        font-size: 2rem;
+        text-align: center;
+        font-family: 'Comic Sans MS', cursive, sans-serif;
+    }
+</style>
+
+<script define:vars={{ keybind: keybind, id: id }}>
+  document.addEventListener('keydown', (event) => {
+    if (event.key.toLowerCase() == keybind) {
+        const audio = document.getElementById('audio-player-'+id);
+        audio.play();
+    }
+  });
+</script>

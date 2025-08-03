@@ -1,0 +1,44 @@
+---
+import SFXCard from './SFXCard.astro';
+import clipJson from '../assets/clips.json';
+import Title from './Title.astro';
+
+type Clip = {
+  name: string;
+  file: string;
+  keybind: string;
+};
+
+const clipList: Clip[] = clipJson.clips.map((clip): Clip => ({
+  name: clip.name,
+  file: clip.file,
+  keybind: clip.keybind,
+}));
+
+let delay = 0;
+const interval = 50;
+---
+<div id="container">
+    <Title title="Nobbers Soundboard"/>
+    <div id="sfx-table" class="transition flex flex-col rounded-[var(--radius-large)] bg-[var(--card-bg)] py-1 md:py-0 md:bg-transparent md:gap-4 mb-4">
+        {clipList.map((entry: Clip) => (
+            <SFXCard
+                name={entry.name}
+                file={entry.file}
+                keybind={entry.keybind}
+                class:list="onload-animation"
+                style={`animation-delay: calc(var(--content-delay) + ${delay++ * interval}ms);`}
+            ></SFXCard>
+        ))}
+    </div>
+</div>
+<style>
+
+#container{
+    display: flex;
+    justify-content: center; /* horizontal */
+    align-items: center;     /* vertical */
+    flex-direction: column;
+}
+
+</style>

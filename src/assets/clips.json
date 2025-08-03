@@ -1,0 +1,14 @@
+{
+    "clips": [
+        {
+            "name": "Pruned",
+            "file": "sfx/pruned.mp3",
+            "keybind": "p"
+        },
+        {
+            "name": "test 2",
+            "file": "sfx/test.mp3",
+            "keybind": "k"
+        }
+    ]
+}
