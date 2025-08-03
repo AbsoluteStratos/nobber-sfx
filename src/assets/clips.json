@@ -20,7 +20,7 @@
             "name": "sheeesh",
             "file": "sfx/sheesh.mp3",
             "clip_url": "ohhnoss/clip/EphemeralLuckyJellyfishSMOrc-269c6QILhLJOLKlD",
-            "game": "Art",
+            "game": "Just Chatting",
             "keybind": "h",
             "disable": false
         },
@@ -28,7 +28,7 @@
             "name": "nwooo",
             "file": "sfx/nwooo.mp3",
             "clip_url": "ohhnoss/clip/NeighborlyGlamorousWhaleFutureMan-WuG12YwBj-61QH7N",
-            "game": "Just Chatting",
+            "game": "Art",
             "keybind": "n",
             "disable": false
         },
