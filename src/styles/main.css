@@ -20,3 +20,7 @@ html, body {
     display: flex;
     flex-direction: column;
 }
+
+:root {
+  --content-delay: 1ms;
+}
