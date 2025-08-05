@@ -24,8 +24,9 @@ const {title} = Astro.props;
 
         font-size: clamp(2rem, 4vw, 4rem);
 
-        -webkit-text-stroke: 2px white; /* white border around text */
-        text-stroke: 2px white;         /* fallback for future support */
+        paint-order: stroke fill;
+        -webkit-text-stroke: 0.1em white; /* white border around text */
+        text-stroke: 0.1em white;         /* fallback for future support */
 
         -webkit-user-select: none;
         -moz-user-select: none;

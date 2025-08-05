@@ -17,7 +17,7 @@ const id = name.toLocaleLowerCase().replace(" ","-");
     <div class="audio-name">
         {name}
         <div >
-        <a href={"https://twitch.tv/" + clip_url} target="_blank" id="audio-clip-game">
+        <a href={"https://twitch.tv/" + clip_url} target="_blank" class="audio-clip-game">
             <span>{game}</span>
             <Icon name="material-symbols:link" class="game-link-icon"></Icon>
         </a>
@@ -63,11 +63,13 @@ const id = name.toLocaleLowerCase().replace(" ","-");
         color: salmon;
         font-weight: bold;
         font-size: clamp(0.5rem, 2.5vw, 1.25rem);
-        -webkit-text-stroke: 0.25px white; /* white border around text */
-        text-stroke: 0.25px white;         /* fallback for future support */
+
+        paint-order: stroke fill;
+        -webkit-text-stroke: 0.1em white; /* white border around text */
+        text-stroke: 0.1em white;  
     }
 
-    #audio-clip-game{
+    .audio-clip-game{
         display: flex;
         justify-content: right;
         align-items: center;
@@ -89,7 +91,7 @@ const id = name.toLocaleLowerCase().replace(" ","-");
         text-decoration: underline; /* Add underline on hover */
     }
 
-    #audio-clip-game>.game-link-icon {
+    .game-link-icon {
         vertical-align: middle;
     }
 
@@ -132,6 +134,21 @@ const id = name.toLocaleLowerCase().replace(" ","-");
         text-align: center;
         font-family: 'Comic Sans MS', cursive, sans-serif;
     }
+
+     @media (max-width: 800px) {
+      .audio-container {
+        flex-direction: column; /* Stacks items vertically on mobile */
+      }
+      .audio-name{
+        margin-top: 5px;
+        text-align: center;
+        font-size: 2rem;
+      }
+      .audio-clip-game{
+        justify-content: center;
+      }
+    }
+
 </style>
 
 <script define:vars={{ keybind: keybind, id: id }}>
