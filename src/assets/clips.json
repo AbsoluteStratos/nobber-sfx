@@ -21,7 +21,7 @@
             "file": "sfx/sheesh.mp3",
             "clip_url": "ohhnoss/clip/EphemeralLuckyJellyfishSMOrc-269c6QILhLJOLKlD",
             "game": "Just Chatting",
-            "keybind": "h",
+            "keybind": "e",
             "disable": false
         },
         {
@@ -33,6 +33,14 @@
             "disable": false
         },
         {
+            "name": "yeet",
+            "file": "sfx/yeet.mp3",
+            "clip_url": "ohhnoss/clip/BrainyAttractiveSushiSaltBae-k5koc2mTEqZXJlGhN",
+            "game": "Art",
+            "keybind": "y",
+            "disable": false
+        },
+        {
             "name": "gugyugubabugwaaaah",
             "file": "sfx/gugyugubabugwaaaah.mp3",
             "clip_url": "ohhnoss/clip/GracefulPiliableTardigradePlanking-7nkeQHegqrJO3_MR",
@@ -41,11 +49,11 @@
             "disable": false
         },
         {
-            "name": "nobonobu",
-            "file": "sfx/nobonobu.mp3",
-            "clip_url": "ohhnoss/clip/CreativeNaiveWallabyCorgiDerp-N7HxoPE-6JVaIEtB",
-            "game": "Placid Plastic Duck Simulator",
-            "keybind": "b",
+            "name": "oh my nobb",
+            "file": "sfx/ohmy.mp3",
+            "clip_url": "ohhnoss/clip/FriendlyWimpyLoris4Head-Bl4yQ3u6g0Glm7M2",
+            "game": "Art",
+            "keybind": "h",
             "disable": false
         },
         {
@@ -54,6 +62,14 @@
             "clip_url": "ohhnoss/clip/DiligentWonderfulZucchiniPJSugar-QMPkr3sdACHgDS1H",
             "game": "Just Chatting",
             "keybind": "i",
+            "disable": false
+        },
+        {
+            "name": "nobonobu",
+            "file": "sfx/nobonobu.mp3",
+            "clip_url": "ohhnoss/clip/CreativeNaiveWallabyCorgiDerp-N7HxoPE-6JVaIEtB",
+            "game": "Placid Plastic Duck Simulator",
+            "keybind": "b",
             "disable": false
         },
         {
